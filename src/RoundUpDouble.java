@@ -6,9 +6,7 @@ public class RoundUpDouble {
         System.out.print("Input a double: ");
         double d = input.nextDouble();
 
-        int toInt = (int)(d);
-        int roundedUp = toInt;
-        if (d - toInt > 0) roundedUp++;
-        System.out.println(roundedUp);
+        int toInt = (int)(d + 0.999999999999);
+        System.out.println(toInt);
     }
 }
