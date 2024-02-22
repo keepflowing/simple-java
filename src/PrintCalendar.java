@@ -9,6 +9,9 @@ public class PrintCalendar {
         System.out.print("Enter a month as a number between 1 - 12: ");
         int month = input.nextInt();
 
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+
         printMonth(year, month);
     }
 
@@ -25,7 +28,7 @@ public class PrintCalendar {
     }
 
     public static String getMonthTitle(int month) {
-        String[] names = {"January", "February", "Mars", "April", "May", "June",
+        String[] names = {"January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"};
         return names[month - 1];
     }
