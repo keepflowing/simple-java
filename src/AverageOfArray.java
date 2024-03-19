@@ -37,7 +37,9 @@ public class AverageOfArray {
         while (true) {
             try {
                 System.out.print(msg);
-                return input.nextInt();
+                int value = input.nextInt();
+                if (value > 1) return value;
+                System.out.println("Please input a positive integer greater than 0.");
             }
             catch(InputMismatchException e) {
                 input.nextLine();
@@ -53,7 +55,7 @@ public class AverageOfArray {
      */
     public static void fillArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = getInteger("Ange heltal " + (i+1) + ": ");
+            array[i] = getInteger("Input integer " + (i+1) + ": ");
         }
     }
 
